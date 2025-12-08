@@ -1,0 +1,31 @@
+name: mcp-calculator
+
+x-mcp-calculator-common-config: &mcp-calculator-common-config
+  image: mcp-calculator
+  pull_policy: never
+  build:
+    context: .
+  # Mount for live editing while dev
+  volumes:
+    - type: bind
+      source: ./src
+      target: /opt/app/src
+
+services:
+  mcp-calculator:
+    <<: *mcp-calculator-common-config
+    entrypoint:
+    - python
+    - -im
+    - calculator
+  test:
+    <<: *mcp-calculator-common-config
+    entrypoint:
+    - python
+    - -m
+    - pytest
+    - --pyargs
+    - calculator
+    profiles:
+    - test
+

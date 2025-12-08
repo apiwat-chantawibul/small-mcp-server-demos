@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "calculator": {
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--build",
+        "--rm",
+        "mcp-calculator"
+      ]
+    }
+  }
+}
+
