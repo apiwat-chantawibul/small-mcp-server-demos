@@ -80,6 +80,41 @@ Tips for getting started:
   19156405722357308561753031528580354174521141090412167795565044468983573890301929301481201421935966797637088118731162731160081352206596535363670058717905636820806281166523
 ```
 
+# Use HTTP transport instead
+
+Start MCP server first with:
+
+```shell
+docker compose run \
+  -i -t --rm --build \
+  -p 8000:8000 \
+  mcp-calculator --transport http
+```
+
+And redefine `.gemini/settings.json` to:
+
+```json
+{
+  "mcpServers": {
+    "calculator": {
+      "httpUrl": "http://localhost:8000/mcp"
+    }
+  }
+}
+```
+
+or `.cursor/mcp.json`  to:
+
+```json
+{
+  "mcpServers": {
+    "anon": {
+      "url": "http://localhost:8000/mcp"
+    }
+  }
+}
+```
+
 # Running unit test
 
 ```shell
