@@ -16,6 +16,8 @@ class Evaluator:
         ast.Pow: op.pow,
         ast.BitXor: op.xor,
         ast.USub: op.neg,
+        ast.Mod: op.mod,
+        ast.FloorDiv: op.floordiv,
     }
 
     @staticmethod

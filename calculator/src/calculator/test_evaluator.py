@@ -26,6 +26,16 @@ from calculator.evaluator import Evaluator
             '(4+2)**3',
             216,
         ),
+        (
+            'modulo operator',
+            '11 % 3',
+            2,
+        ),
+        (
+            'floor division operator',
+            '11 // 3',
+            3,
+        ),
     ],
     ids = (lambda x, *_: x),
 )
