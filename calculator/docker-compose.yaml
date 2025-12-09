@@ -14,10 +14,6 @@ x-mcp-calculator-common-config: &mcp-calculator-common-config
 services:
   mcp-calculator:
     <<: *mcp-calculator-common-config
-    entrypoint:
-    - python
-    - -im
-    - calculator
   test:
     <<: *mcp-calculator-common-config
     entrypoint:
