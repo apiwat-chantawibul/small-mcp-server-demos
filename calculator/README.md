@@ -1,3 +1,10 @@
+# How to try the demo with MCP clients
+
+- [Gemini-CLI](https://github.com/google-gemini/gemini-cli):
+  Start the `gemini` command in the directory with `.gemini` settings provided.
+- [Cursor](https://cursor.com/docs/get-started/quickstart):
+  "Open project" on the directory with `.cursor` settings provided.
+
 # Example runs
 
 ## Gemini-CLI
@@ -71,5 +78,11 @@ Tips for getting started:
 ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ✦ The result of 123 to the power of 3 to the power of 4 is:
   19156405722357308561753031528580354174521141090412167795565044468983573890301929301481201421935966797637088118731162731160081352206596535363670058717905636820806281166523
+```
+
+# Running unit test
+
+```shell
+docker compose run --rm --build test
 ```
 
