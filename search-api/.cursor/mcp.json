@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "search-api": {
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--build",
+        "--rm",
+        "mcp-search-api"
+      ]
+    }
+  }
+}

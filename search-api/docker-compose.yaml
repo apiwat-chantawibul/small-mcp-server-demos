@@ -1,0 +1,16 @@
+name: mcp-search-api
+
+services:
+  mcp-search-api:
+    image: mcp-search-api
+    pull_policy: never
+    build:
+      context: .
+    environment:
+      SEARCH_API_KEY: "${SEARCH_API_KEY:?}"
+    # Mount for live editing while dev
+    volumes:
+      - type: bind
+        source: ./src
+        target: /opt/app/src
+
