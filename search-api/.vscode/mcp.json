@@ -1,0 +1,16 @@
+{
+  "servers": {
+    "search-api": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--build",
+        "--rm",
+        "mcp-search-api"
+      ]
+    }
+  }
+}
+
